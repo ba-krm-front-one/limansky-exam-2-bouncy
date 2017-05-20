@@ -290,15 +290,11 @@ nav .ba-menu {
 .carousel-cell{
   width: 100%;
 }
-.flickity-page-dots .dot{
-  /* Style for "Ellipse 7" */
-  content: '';
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #19BD9A;
-}
 
+.carousel{
+  /* Style for "Rectangle" */
+
+}
 
 .ba-team__content--right {
   .title {
@@ -405,7 +401,13 @@ nav .ba-menu {
 
   }
 }
-
+.testimonials__block--slider{
+  width: 1170px;
+  height: 316px;
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.05);
+  background-color: #ffffff;
+  margin: 0 auto;
+}
 .testimonials__container {
   display: flex;
   justify-content: space-between;

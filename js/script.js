@@ -1,3 +1,4 @@
+//--------------------isotope
 (() => {
     function useIsotope(event) {
 
@@ -10,20 +11,11 @@
                 columnWidth: 100
             }
         });
-        // init Isotope with jQuery
-        /*let isotopeGrid = $( '.ba-works').isotope({
-            itemSelector: '.ba-grid-item',
-            percentPosition: true,
-            masonry: {
-                // use element for option
-                columnWidth: '.ba-sizer'
-            }
-        });*/
+
 
         let applyFilterFromLink = (linkObject) => {
             let filterValue = linkObject.dataset.filter;
-            // let filterValue = event.target.dataset.filter;
-            // use matching filter function
+
             isotopeGrid.arrange({ filter: filterValue });
         };
 
@@ -53,40 +45,21 @@
 })();
 
 
-
-// function initMap() {
-//     var uluru = {lat: -25.363, lng: 131.044};
-//     var map = new google.maps.Map(document.getElementById('map'), {
-//         zoom: 4,
-//         center: uluru
-//     });
-//     var marker = new google.maps.Marker({
-//         position: uluru,
-//         map: map
-//     });
-// }
-
-
-
-
-
-// function initMap() {
-//         var map = new google.maps.Map(document.getElementById('map'), {
-//             zoom: 10,
-//             center: {lat: 55, lng: 1105}
-//         });
-//
-//
-//         var beachMarker = new google.maps.Marker({
-//             position: {lat: 52.3265115, lng: 4.9203},
-//             map: map,
-//             icon:  {
-//                 url: "img/bbb.png",
-//                 scaledSize: new google.maps.Size(32, 42)
-//             }
-//         });
-//     }
-
+//----------------------scroll
+(() => {
+$(document).ready(function () {
+    $('a[href^="#"]').click(function () {
+        elementClick = $(this).attr("href");
+        destination = $(elementClick).offset().top;
+        if ($.browser.safari) {
+            $('body').animate({scrollTop: destination}, 1500);
+        } else {
+            $('html').animate({scrollTop: destination}, 1500);
+        }
+        return false;
+    });
+});
+})();
 
 
 
